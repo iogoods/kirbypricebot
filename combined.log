@@ -1,0 +1,169 @@
+{"level":"info","message":"Fetching Bitcoin Dominance data from: https://api.coingecko.com/api/v3/global","service":"cointrendsbot","timestamp":"2025-01-02 23:28:16"}
+{"level":"info","message":"Cached Bitcoin Dominance data.","service":"cointrendsbot","timestamp":"2025-01-02 23:28:16"}
+{"level":"info","message":"Sending advertisement to Chat ID -1002291249716: 🚀 To the moon? Forget that! $KIRBY is heading straight to Mars. Join the #KirbyArmy and see for yourself!","service":"cointrendsbot","timestamp":"2025-01-02 23:28:16"}
+{"level":"info","message":"Advertisement sent to Chat ID -1002291249716.","service":"cointrendsbot","timestamp":"2025-01-02 23:28:16"}
+{"level":"info","message":"Running scheduled task: checkAlerts","service":"cointrendsbot","timestamp":"2025-01-02 23:30:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-02 23:30:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96854","service":"cointrendsbot","timestamp":"2025-01-02 23:30:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-02 23:30:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96854","service":"cointrendsbot","timestamp":"2025-01-02 23:30:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-02 23:30:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96854","service":"cointrendsbot","timestamp":"2025-01-02 23:30:00"}
+{"level":"info","message":"Command loaded: /ath","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /atl","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /deletealert","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /dex","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /dom","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /help","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /kirby","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /myalerts","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /news","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /nft","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /poll","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /price","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /rates","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /sentiment","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /setalert","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /start","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /stock","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /top","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /ath","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /atl","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /deletealert","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /dex","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /dom","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /help","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /kirby","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /myalerts","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /news","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /nft","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /poll","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /price","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /rates","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /sentiment","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /setalert","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /start","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /stock","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Command loaded: /top","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Fetching coin data from CoinGecko...","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Successfully fetched and cached 16404 coins from CoinGecko.","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Fixed ticker 'BTC' correctly maps to 'bitcoin'.","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Fixed ticker 'ETH' correctly maps to 'ethereum'.","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Fixed ticker 'ADA' correctly maps to 'cardano'.","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Fixed ticker 'XRP' correctly maps to 'ripple'.","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Fixed ticker 'DOT' correctly maps to 'polkadot'.","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Fixed ticker 'SOL' correctly maps to 'solana'.","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Fixed ticker 'DOGE' correctly maps to 'dogecoin'.","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Fixed ticker 'BNB' correctly maps to 'binancecoin'.","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Coin data fetched and cached successfully.","service":"cointrendsbot","timestamp":"2025-01-02 23:32:12"}
+{"level":"info","message":"Received /price command with input: \"KASBTC\" from chat ID: -1002291249716","service":"cointrendsbot","timestamp":"2025-01-02 23:32:21"}
+{"level":"info","message":"Sending advertisement to Chat ID -1002291249716: 📢 <b>KIRBY: The Crypto of Tomorrow!</b> Don't miss out on this exciting journey. 🔗 <a href=\"https://t.me/kirbyonkas\">Learn more</a>.","service":"cointrendsbot","timestamp":"2025-01-02 23:32:23"}
+{"level":"info","message":"Advertisement sent to Chat ID -1002291249716.","service":"cointrendsbot","timestamp":"2025-01-02 23:32:23"}
+{"level":"info","message":"Received /price command with input: \"BTC\" from chat ID: -1002291249716","service":"cointrendsbot","timestamp":"2025-01-02 23:33:04"}
+{"level":"info","message":"Sending advertisement to Chat ID -1002291249716: 💥 Not just a coin, but a movement: $KIRBY is taking over the market. <a href=\"https://t.me/kirbyonkas\">Join the revolution</a>!","service":"cointrendsbot","timestamp":"2025-01-02 23:33:04"}
+{"level":"info","message":"Advertisement sent to Chat ID -1002291249716.","service":"cointrendsbot","timestamp":"2025-01-02 23:33:04"}
+{"level":"info","message":"No advertisement sent to Chat ID -1002291249716 (probability check failed).","service":"cointrendsbot","timestamp":"2025-01-02 23:33:46"}
+{"level":"info","message":"Sending advertisement to Chat ID -1002291249716: 🌐 $KIRBY: Bridging Kaspa and Solana. Backed by strong German developers. <a href=\"https://t.me/kirbyonkas\">Join today</a>!","service":"cointrendsbot","timestamp":"2025-01-02 23:33:59"}
+{"level":"info","message":"Advertisement sent to Chat ID -1002291249716.","service":"cointrendsbot","timestamp":"2025-01-02 23:33:59"}
+{"level":"info","message":"Running scheduled task: checkAlerts","service":"cointrendsbot","timestamp":"2025-01-02 23:35:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-02 23:35:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96871","service":"cointrendsbot","timestamp":"2025-01-02 23:35:01"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-02 23:35:01"}
+{"level":"info","message":"Price fetched for bitcoin: $96871","service":"cointrendsbot","timestamp":"2025-01-02 23:35:01"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-02 23:35:01"}
+{"level":"info","message":"Price fetched for bitcoin: $96871","service":"cointrendsbot","timestamp":"2025-01-02 23:35:01"}
+{"level":"info","message":"Fetching price for coin ID: btc","service":"cointrendsbot","timestamp":"2025-01-02 23:35:01"}
+{"0":"P","1":"r","10":" ","11":"f","12":"o","13":"r","14":" ","15":"b","16":"t","17":"c","18":" ","19":"n","2":"i","20":"o","21":"t","22":" ","23":"f","24":"o","25":"u","26":"n","27":"d","3":"c","4":"e","5":" ","6":"d","7":"a","8":"t","9":"a","level":"error","message":"Error fetching price for btc:","service":"cointrendsbot","timestamp":"2025-01-02 23:35:01"}
+{"level":"info","message":"Command loaded: /ath","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /atl","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /deletealert","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /dex","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /dom","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /help","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /kirby","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /myalerts","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /news","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /nft","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /poll","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /price","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /rates","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /sentiment","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /setalert","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /start","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /stock","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /top","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /ath","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /atl","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /deletealert","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /dex","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /dom","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /help","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /kirby","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /myalerts","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /news","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /nft","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /poll","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /price","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /rates","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /sentiment","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /setalert","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /start","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /stock","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Command loaded: /top","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Fetching coin data from CoinGecko...","service":"cointrendsbot","timestamp":"2025-01-02 23:46:02"}
+{"level":"info","message":"Successfully fetched and cached 16405 coins from CoinGecko.","service":"cointrendsbot","timestamp":"2025-01-02 23:46:03"}
+{"level":"info","message":"Fixed ticker 'BTC' correctly maps to 'bitcoin'.","service":"cointrendsbot","timestamp":"2025-01-02 23:46:03"}
+{"level":"info","message":"Fixed ticker 'ETH' correctly maps to 'ethereum'.","service":"cointrendsbot","timestamp":"2025-01-02 23:46:03"}
+{"level":"info","message":"Fixed ticker 'ADA' correctly maps to 'cardano'.","service":"cointrendsbot","timestamp":"2025-01-02 23:46:03"}
+{"level":"info","message":"Fixed ticker 'XRP' correctly maps to 'ripple'.","service":"cointrendsbot","timestamp":"2025-01-02 23:46:03"}
+{"level":"info","message":"Fixed ticker 'DOT' correctly maps to 'polkadot'.","service":"cointrendsbot","timestamp":"2025-01-02 23:46:03"}
+{"level":"info","message":"Fixed ticker 'SOL' correctly maps to 'solana'.","service":"cointrendsbot","timestamp":"2025-01-02 23:46:03"}
+{"level":"info","message":"Fixed ticker 'DOGE' correctly maps to 'dogecoin'.","service":"cointrendsbot","timestamp":"2025-01-02 23:46:03"}
+{"level":"info","message":"Fixed ticker 'BNB' correctly maps to 'binancecoin'.","service":"cointrendsbot","timestamp":"2025-01-02 23:46:03"}
+{"level":"info","message":"Coin data fetched and cached successfully.","service":"cointrendsbot","timestamp":"2025-01-02 23:46:03"}
+{"level":"info","message":"Sending advertisement to Chat ID -1002291249716: 💎 The next memecoin with massive potential? It’s $KIRBY – solid growth and BIG #KRC20 potential. <a href=\"https://t.me/kirbyonkas\">Join now</a>.","service":"cointrendsbot","timestamp":"2025-01-02 23:46:32"}
+{"level":"info","message":"Advertisement sent to Chat ID -1002291249716.","service":"cointrendsbot","timestamp":"2025-01-02 23:46:32"}
+{"level":"info","message":"No advertisement sent to Chat ID -1002291249716 (probability check failed).","service":"cointrendsbot","timestamp":"2025-01-02 23:47:20"}
+{"level":"info","message":"Sending advertisement to Chat ID -1002291249716: 🌟 $KIRBY combines innovation with community. Be part of the movement: <a href=\"https://t.me/kirbyonkas\">Join today</a>!","service":"cointrendsbot","timestamp":"2025-01-02 23:47:34"}
+{"level":"info","message":"Advertisement sent to Chat ID -1002291249716.","service":"cointrendsbot","timestamp":"2025-01-02 23:47:34"}
+{"level":"info","message":"Sending advertisement to Chat ID -1002291249716: 🌟 $KIRBY combines innovation with community. Be part of the movement: <a href=\"https://t.me/kirbyonkas\">Join today</a>!","service":"cointrendsbot","timestamp":"2025-01-02 23:48:56"}
+{"level":"info","message":"Advertisement sent to Chat ID -1002291249716.","service":"cointrendsbot","timestamp":"2025-01-02 23:48:56"}
+{"level":"info","message":"Running scheduled task: checkAlerts","service":"cointrendsbot","timestamp":"2025-01-02 23:50:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-02 23:50:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96898","service":"cointrendsbot","timestamp":"2025-01-02 23:50:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-02 23:50:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96898","service":"cointrendsbot","timestamp":"2025-01-02 23:50:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-02 23:50:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96898","service":"cointrendsbot","timestamp":"2025-01-02 23:50:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-02 23:50:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96898","service":"cointrendsbot","timestamp":"2025-01-02 23:50:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-02 23:50:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96898","service":"cointrendsbot","timestamp":"2025-01-02 23:50:00"}
+{"level":"info","message":"Running scheduled task: checkAlerts","service":"cointrendsbot","timestamp":"2025-01-02 23:55:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-02 23:55:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96851","service":"cointrendsbot","timestamp":"2025-01-02 23:55:01"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-02 23:55:01"}
+{"level":"info","message":"Price fetched for bitcoin: $96851","service":"cointrendsbot","timestamp":"2025-01-02 23:55:01"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-02 23:55:01"}
+{"level":"info","message":"Price fetched for bitcoin: $96851","service":"cointrendsbot","timestamp":"2025-01-02 23:55:01"}
+{"level":"info","message":"Running scheduled task: checkAlerts","service":"cointrendsbot","timestamp":"2025-01-03 00:00:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-03 00:00:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96827","service":"cointrendsbot","timestamp":"2025-01-03 00:00:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-03 00:00:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96827","service":"cointrendsbot","timestamp":"2025-01-03 00:00:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-03 00:00:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96827","service":"cointrendsbot","timestamp":"2025-01-03 00:00:00"}
+{"level":"info","message":"Running scheduled task: checkAlerts","service":"cointrendsbot","timestamp":"2025-01-03 00:05:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-03 00:05:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96910","service":"cointrendsbot","timestamp":"2025-01-03 00:05:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-03 00:05:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96910","service":"cointrendsbot","timestamp":"2025-01-03 00:05:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-03 00:05:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96910","service":"cointrendsbot","timestamp":"2025-01-03 00:05:00"}
+{"level":"info","message":"Running scheduled task: checkAlerts","service":"cointrendsbot","timestamp":"2025-01-03 00:10:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-03 00:10:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96763","service":"cointrendsbot","timestamp":"2025-01-03 00:10:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-03 00:10:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96763","service":"cointrendsbot","timestamp":"2025-01-03 00:10:00"}
+{"level":"info","message":"Fetching price for coin ID: bitcoin","service":"cointrendsbot","timestamp":"2025-01-03 00:10:00"}
+{"level":"info","message":"Price fetched for bitcoin: $96763","service":"cointrendsbot","timestamp":"2025-01-03 00:10:00"}
