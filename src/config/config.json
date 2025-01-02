@@ -1,0 +1,26 @@
+{
+    "development": {
+        "username": "alerts",
+        "password": "i7tp5RhicCbXmSSJ",
+        "database": "alerts",
+        "host": "188.68.38.5",
+        "dialect": "mysql",
+        "logging": false
+    },
+    "test": {
+        "username": "alerts",
+        "password": "i7tp5RhicCbXmSSJ",
+        "database": "alerts",
+        "host": "188.68.38.5",
+        "dialect": "mysql",
+        "logging": false
+    },
+    "production": {
+        "username": "alerts",
+        "password": "i7tp5RhicCbXmSSJ",
+        "database": "alerts",
+        "host": "188.68.38.5",
+        "dialect": "mysql",
+        "logging": false
+    }
+}
