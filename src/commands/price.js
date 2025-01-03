@@ -14,34 +14,36 @@ module.exports = {
             return;
         }
 
-        const input = args[0].toUpperCase();
+        const input = args[0].toLowerCase();
         logger.info(`Received /price command with input: "${input}" from chat ID: ${chatId}`);
 
-        const fixedCoin = getCoinByFixedTicker(input.toLowerCase());
-        const coinId = fixedCoin?.id || input.toLowerCase();
+        // Step 1: Check fixedTicker mapping
+        const fixedCoin = getCoinByFixedTicker(input);
+        const coinId = fixedCoin?.id || input; // Use fixedTicker `id` if found, otherwise fallback to input
 
-        // First, try fetching data from CoinGecko
         const coingeckoApiUrl = `${process.env.COINGECKO_API_URL}/coins/markets`;
-        const kasApiUrl = `https://api.kas.fyi/token/krc20/marketData?tickers=${input}`;
+        const kasApiUrl = `https://api.kas.fyi/token/krc20/marketData?tickers=${input.toUpperCase()}`;
 
         try {
+            // Step 2: Attempt CoinGecko lookup
             const coingeckoResponse = await fetchFromCoinGecko(coingeckoApiUrl, coinId);
             if (coingeckoResponse) {
                 await bot.sendMessage(chatId, coingeckoResponse, { parse_mode: 'Markdown' });
                 return;
             }
 
-            // Introduce a short delay before checking kas.fyi
+            // Introduce a short delay before fallback
             await delay(1000);
 
+            // Step 3: Attempt kas.fyi lookup
             const kasResponse = await fetchFromKasFyi(kasApiUrl);
             if (kasResponse) {
                 await bot.sendMessage(chatId, kasResponse, { parse_mode: 'Markdown' });
                 return;
             }
 
-            // If both fail, send an error message
-            await bot.sendMessage(chatId, `No data found for "${input}". Please check the cryptocurrency name or ticker symbol.`);
+            // Step 4: No data found on either platform
+            await bot.sendMessage(chatId, `No data found for "${input}". Please try using the full name of the cryptocurrency.\nExample: /price bitcoin instead of /price btc.`);
             logger.warn(`No data found for input "${input}" on both CoinGecko and kas.fyi.`);
         } catch (error) {
             logger.error('Error fetching price data:', error);
@@ -93,7 +95,6 @@ const fetchFromCoinGecko = async (apiUrl, coinId) => {
 🏆 ATH: $${ath} (${athChange}%)
 📊 24h Vol: $${volume24h}
 💎 MCap: $${marketCap}
-
         `;
     } catch (error) {
         logger.warn('CoinGecko API error:', error.message);
@@ -110,11 +111,11 @@ const fetchFromKasFyi = async (apiUrl) => {
         if (!data || !data.results || data.results.length === 0) return null;
 
         const coinData = data.results[0];
-        const name = coinData.name || coinData.ticker || "Unknown"; // Fallback to ticker if name is missing
+        const name = coinData.name || coinData.ticker || "Unknown";
         const priceUsd = coinData.price?.usd?.toFixed(8) || 'N/A';
-        const marketCapUsd = coinData.marketCap?.usd ? `$${Number(coinData.marketCap.usd).toLocaleString()}` : 'N/A'; // Format with thousands separators
+        const marketCapUsd = coinData.marketCap?.usd ? `$${Number(coinData.marketCap.usd).toLocaleString()}` : 'N/A';
         const volume24hUsd = coinData.volume24h?.usd ? `$${Number(coinData.volume24h.usd).toLocaleString()}` : 'N/A';
-        const rank = coinData.rank || 'N/A'; // Corrected variable reference
+        const rank = coinData.rank || 'N/A';
 
         return `
 🪙 *${name}* Price (via kas.fyi) 🪙
@@ -123,14 +124,12 @@ const fetchFromKasFyi = async (apiUrl) => {
 💰 *Market Cap:* ${marketCapUsd}
 📊 *24h Volume:* ${volume24hUsd}
 🏅 *Rank:* ${rank}
-
         `;
     } catch (error) {
         logger.warn('kas.fyi API error:', error.message);
         return null;
     }
 };
-
 
 // Utility to introduce delay
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
