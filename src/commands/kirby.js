@@ -1,4 +1,5 @@
 const axios = require('axios');
+const { integrateAdvertisement } = require('../utils/advertisement'); // Werbung einfügen
 
 module.exports = {
     name: 'kirby',
@@ -39,21 +40,25 @@ module.exports = {
 
             const rank = kirbyData.rank || 'N/A';
 
-            // Send the Kirby price details as a message
-            const message = `
-🪙 *KIRBY* Price 🪙
+            // Format the Kirby price details message
+            const kirbyMessage = `
+<b>🪙 KIRBY Price 🪙</b>
 
-💵 *Current Price:* $${priceUsd}
-💰 *Market Cap:* ${marketCapUsd}K
-📊 *24h Volume:* ${volume24hUsd}K
-🏅 *Rank:* ${rank}
+💵 <b>Current Price:</b> $${priceUsd}
+💰 <b>Market Cap:</b> ${marketCapUsd}K
+📊 <b>24h Volume:</b> ${volume24hUsd}K
+🏅 <b>Rank:</b> ${rank}
             `;
 
-            await bot.sendMessage(chatId, message, { parse_mode: 'Markdown' });
+            // Add advertisement to the message
+            const finalMessage = integrateAdvertisement(kirbyMessage);
+            await bot.sendMessage(chatId, finalMessage, { parse_mode: 'HTML', disable_web_page_preview: true });
 
         } catch (error) {
             console.error('Error fetching Kirby data:', error);
-            await bot.sendMessage(chatId, "Oops! Something went wrong while fetching the Kirby data. Please try again later.");
+            const errorMessage = "Oops! Something went wrong while fetching the Kirby data. Please try again later.";
+            const finalErrorMessage = integrateAdvertisement(errorMessage);
+            await bot.sendMessage(chatId, finalErrorMessage, { parse_mode: 'HTML', disable_web_page_preview: true });
         }
     }
 };
