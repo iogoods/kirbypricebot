@@ -1,19 +1,22 @@
-// src/commands/dex.js
 const axios = require('axios');
 const logger = require('../utils/logger');
 const { TokenListProvider } = require('@solana/spl-token-registry');
 const cache = require('../utils/priceCache'); // For caching
 const fixedTickers = require('../utils/fixedTickers'); // Fixed ticker mapping
+const { integrateAdvertisement } = require('../utils/advertisement'); // Werbung integrieren
 
 module.exports = {
     name: 'dex',
     description: 'Fetches the price of a Solana token based on its mint address.',
+    skipGlobalAd: true, // Verhindert globale Werbung
     usage: '/dex [solana_mint_address]',
     execute: async (bot, msg, args) => {
         const chatId = msg.chat.id;
 
         if (args.length === 0) {
-            await bot.sendMessage(chatId, "Please provide the mint address of the Solana token.\nExample: /dex So11111111111111111111111111111111111111112");
+            const errorMessage = "Please provide the mint address of the Solana token.\nExample: /dex So11111111111111111111111111111111111111112";
+            const response = integrateAdvertisement(errorMessage);
+            await bot.sendMessage(chatId, response, { parse_mode: 'HTML', disable_web_page_preview: true });
             return;
         }
 
@@ -22,7 +25,9 @@ module.exports = {
 
         // Validate the Mint Address
         if (!isValidSolanaAddress(mintAddress)) {
-            await bot.sendMessage(chatId, `The provided mint address "${mintAddress}" is invalid. Please check and try again.`);
+            const errorMessage = `The provided mint address "${mintAddress}" is invalid. Please check and try again.`;
+            const response = integrateAdvertisement(errorMessage);
+            await bot.sendMessage(chatId, response, { parse_mode: 'HTML', disable_web_page_preview: true });
             logger.warn(`Invalid Mint Address provided: "${mintAddress}" by chat ID: ${chatId}`);
             return;
         }
@@ -31,7 +36,9 @@ module.exports = {
             // Fetch token information based on the Mint Address
             const tokenInfo = await getTokenInfoByMintAddress(mintAddress);
             if (!tokenInfo) {
-                await bot.sendMessage(chatId, `No token found for the mint address "${mintAddress}". Please verify the address and try again.`);
+                const errorMessage = `No token found for the mint address "${mintAddress}". Please verify the address and try again.`;
+                const response = integrateAdvertisement(errorMessage);
+                await bot.sendMessage(chatId, response, { parse_mode: 'HTML', disable_web_page_preview: true });
                 logger.warn(`No token found for Mint Address: "${mintAddress}"`);
                 return;
             }
@@ -42,7 +49,9 @@ module.exports = {
             // Map symbol to CoinGecko ID
             const coinGeckoId = await getCoinGeckoId(symbol);
             if (!coinGeckoId) {
-                await bot.sendMessage(chatId, `No CoinGecko data found for the token "${name}" (${symbol}).`);
+                const errorMessage = `No CoinGecko data found for the token "${name}" (${symbol}).`;
+                const response = integrateAdvertisement(errorMessage);
+                await bot.sendMessage(chatId, response, { parse_mode: 'HTML', disable_web_page_preview: true });
                 logger.warn(`No CoinGecko ID found for symbol "${symbol}"`);
                 return;
             }
@@ -50,7 +59,9 @@ module.exports = {
             // Fetch the token's price from CoinGecko
             const priceData = await getCoinGeckoPriceData(coinGeckoId);
             if (!priceData) {
-                await bot.sendMessage(chatId, `No price data found for the token "${name}" (${symbol}).`);
+                const errorMessage = `No price data found for the token "${name}" (${symbol}).`;
+                const response = integrateAdvertisement(errorMessage);
+                await bot.sendMessage(chatId, response, { parse_mode: 'HTML', disable_web_page_preview: true });
                 logger.warn(`No price data found for CoinGecko ID "${coinGeckoId}"`);
                 return;
             }
@@ -63,12 +74,15 @@ module.exports = {
 🕒 Last Updated: ${priceData.last_updated}
             `;
 
-            await bot.sendMessage(chatId, message, { parse_mode: 'Markdown' });
+            const response = integrateAdvertisement(message);
+            await bot.sendMessage(chatId, response, { parse_mode: 'HTML', disable_web_page_preview: true });
             logger.info(`Sent price data for Token: "${name}" (${symbol}) to chat ID: ${chatId}`);
 
         } catch (error) {
             logger.error(`Error executing /dex command for Mint Address "${mintAddress}":`, error);
-            await bot.sendMessage(chatId, "An error occurred while fetching the price data. Please try again later.");
+            const errorMessage = "An error occurred while fetching the price data. Please try again later.";
+            const response = integrateAdvertisement(errorMessage);
+            await bot.sendMessage(chatId, response, { parse_mode: 'HTML', disable_web_page_preview: true });
         }
     }
 };
@@ -94,7 +108,6 @@ const getTokenInfoByMintAddress = async (mintAddress) => {
             };
         }
 
-        // If token not found in the list, return null
         return null;
 
     } catch (error) {
@@ -106,36 +119,30 @@ const getTokenInfoByMintAddress = async (mintAddress) => {
 // Helper function to map token symbol to CoinGecko ID
 const getCoinGeckoId = async (symbol) => {
     try {
-        // Check if the mapping is cached
         const cachedMapping = cache.get('symbol_to_coingecko_id');
         let symbolToIdMap = cachedMapping;
 
         if (!symbolToIdMap) {
-            // Fetch the CoinGecko coin list and create the mapping
             const response = await axios.get(`${process.env.COINGECKO_API_URL}/coins/list`);
             const coins = response.data;
 
             symbolToIdMap = {};
             coins.forEach(coin => {
                 const sym = coin.symbol.toLowerCase();
-                // Only add the first occurrence to avoid overwriting
                 if (!symbolToIdMap[sym]) {
                     symbolToIdMap[sym] = coin.id;
                 }
             });
 
-            // Apply fixed tickers to override mappings
             Object.keys(fixedTickers).forEach(sym => {
                 symbolToIdMap[sym.toLowerCase()] = fixedTickers[sym].toLowerCase();
             });
 
-            // Cache the mapping for future use (e.g., 24 hours)
-            cache.set('symbol_to_coingecko_id', symbolToIdMap, 86400); // 24 hours in seconds
+            cache.set('symbol_to_coingecko_id', symbolToIdMap, 86400);
             logger.info('Cached symbol to CoinGecko ID mapping.');
         }
 
-        const lowerSymbol = symbol.toLowerCase();
-        return symbolToIdMap[lowerSymbol] || null;
+        return symbolToIdMap[symbol.toLowerCase()] || null;
 
     } catch (error) {
         logger.error(`Error fetching CoinGecko ID for symbol "${symbol}":`, error);
@@ -146,14 +153,12 @@ const getCoinGeckoId = async (symbol) => {
 // Helper function to fetch price data from CoinGecko
 const getCoinGeckoPriceData = async (coinGeckoId) => {
     try {
-        // Check if the price data is cached
         const cachedPrice = cache.get(`cg_price_${coinGeckoId}`);
         if (cachedPrice) {
             logger.info(`Serving cached CoinGecko price data for Coin ID "${coinGeckoId}"`);
             return cachedPrice;
         }
 
-        // Fetch price data from CoinGecko
         const response = await axios.get(`${process.env.COINGECKO_API_URL}/simple/price`, {
             params: {
                 ids: coinGeckoId,
@@ -174,8 +179,7 @@ const getCoinGeckoPriceData = async (coinGeckoId) => {
             last_updated: new Date().toLocaleString()
         };
 
-        // Cache the price data for 5 minutes
-        cache.set(`cg_price_${coinGeckoId}`, priceData, 300); // 5 minutes in seconds
+        cache.set(`cg_price_${coinGeckoId}`, priceData, 300);
         logger.info(`Cached CoinGecko price data for Coin ID "${coinGeckoId}"`);
 
         return priceData;

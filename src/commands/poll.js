@@ -2,6 +2,7 @@
 module.exports = {
     name: 'poll',
     description: 'Create a poll for users to vote on.',
+    skipGlobalAd: true, // Verhindert globale Werbung
     usage: '/poll [question]',
     execute: async (bot, msg, args) => {
         const chatId = msg.chat.id;

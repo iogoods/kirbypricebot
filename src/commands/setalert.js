@@ -4,6 +4,7 @@ const { addAlert } = require('../utils/alertManager');
 module.exports = {
     name: 'setalert',
     description: 'Set an alert for a cryptocurrency price.',
+    skipGlobalAd: true, // Verhindert globale Werbung
     execute: async (bot, msg, args) => {
         const chatId = msg.chat.id;
 

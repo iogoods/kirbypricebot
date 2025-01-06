@@ -1,10 +1,11 @@
-// src/commands/sentiment.js
 const axios = require('axios');
-const logger = require('../utils/logger'); // Ensure you have a logger utility
+const logger = require('../utils/logger');
+const { integrateAdvertisement } = require('../utils/advertisement'); // Werbung einfügen
 
 module.exports = {
     name: 'sentiment',
     description: 'Displays the current sentiment in the cryptocurrency market.',
+    skipGlobalAd: true, // Verhindert globale Werbung
     execute: async (bot, msg, args) => {
         const chatId = msg.chat.id;
 
@@ -17,7 +18,9 @@ module.exports = {
             const data = response.data;
 
             if (!data || !data.data || data.data.length === 0) {
-                await bot.sendMessage(chatId, "Sorry, I couldn't fetch the sentiment data right now. Please try again later.");
+                const errorMessage = "Sorry, I couldn't fetch the sentiment data right now. Please try again later.";
+                const responseMessage = integrateAdvertisement(errorMessage); // Werbung einfügen
+                await bot.sendMessage(chatId, responseMessage, { parse_mode: 'HTML', disable_web_page_preview: true });
                 logger.warn('No sentiment data found in API response.');
                 return;
             }
@@ -30,21 +33,25 @@ module.exports = {
 
             // Create a response message
             const sentimentMessage = `
-📊 *Crypto Market Sentiment* 📊
+📊 <b>Crypto Market Sentiment</b> 📊
 
-- *Current Index:* ${indexValue} (${indexText})
-- *Last Updated:* ${lastUpdated}
+<b>Current Index:</b> ${indexValue} (${indexText})
+<b>Last Updated:</b> ${lastUpdated}
 
 The Fear and Greed Index is a popular indicator for measuring the market sentiment. 
 "Extreme Fear" can be a sign of oversold conditions, while "Extreme Greed" might indicate overbought conditions.
             `;
 
-            await bot.sendMessage(chatId, sentimentMessage, { parse_mode: 'Markdown' });
+            // Add advertisement to the sentiment message
+            const responseMessage = integrateAdvertisement(sentimentMessage); // Werbung einfügen
+            await bot.sendMessage(chatId, responseMessage, { parse_mode: 'HTML', disable_web_page_preview: true });
             logger.info(`/sentiment command executed successfully.`);
 
         } catch (error) {
             logger.error('Error fetching sentiment data:', error);
-            await bot.sendMessage(chatId, "Oops! Something went wrong while fetching the sentiment data. Please try again later.");
+            const errorMessage = "Oops! Something went wrong while fetching the sentiment data. Please try again later.";
+            const responseMessage = integrateAdvertisement(errorMessage); // Werbung einfügen
+            await bot.sendMessage(chatId, responseMessage, { parse_mode: 'HTML', disable_web_page_preview: true });
         }
     }
 };

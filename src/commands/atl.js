@@ -1,13 +1,17 @@
 const axios = require('axios');
 const fixedTickers = require('../utils/fixedTickers'); // Import your fixed tickers mapping
+const { integrateAdvertisement } = require('../utils/advertisement'); // Werbung integrieren
 
 module.exports = {
     name: 'atl', // Command name
+    skipGlobalAd: true, // Verhindert globale Werbung
     async execute(bot, msg, args) {
         const chatId = msg.chat.id;
 
         if (args.length === 0) {
-            return bot.sendMessage(chatId, 'Please provide a cryptocurrency name or symbol. Example: /atl bitcoin or /atl btc');
+            const errorMessage = 'Please provide a cryptocurrency name or symbol. Example: /atl bitcoin or /atl btc';
+            const response = integrateAdvertisement(errorMessage);
+            return bot.sendMessage(chatId, response, { parse_mode: 'HTML', disable_web_page_preview: true });
         }
 
         let query = args.join(' ').toLowerCase();
@@ -33,10 +37,13 @@ ATL Price: $${atlPrice.toLocaleString()}
 % from ATL: ${percentageFromAtl}%
             `;
 
-            bot.sendMessage(chatId, message, { parse_mode: 'HTML' });
+            const responseMessage = integrateAdvertisement(message);
+            bot.sendMessage(chatId, responseMessage, { parse_mode: 'HTML', disable_web_page_preview: true });
         } catch (error) {
             console.error('Error fetching ATL data:', error);
-            bot.sendMessage(chatId, 'Could not fetch ATL data. Please ensure the cryptocurrency name or symbol is correct.');
+            const errorMessage = 'Could not fetch ATL data. Please ensure the cryptocurrency name or symbol is correct.';
+            const response = integrateAdvertisement(errorMessage);
+            bot.sendMessage(chatId, response, { parse_mode: 'HTML', disable_web_page_preview: true });
         }
     },
 };

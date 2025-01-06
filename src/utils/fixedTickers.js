@@ -9,6 +9,7 @@ const fixedTickers = {
     'sol': 'solana',
     'doge': 'dogecoin',
     'bnb': 'binancecoin',
+    'kas': 'kaspa',
     // Fügen Sie weitere feste Ticker nach Bedarf hinzu
 };
 

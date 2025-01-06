@@ -3,6 +3,7 @@ const Alert = require('../models/Alert');
 module.exports = {
     name: 'deletealert',
     description: 'Delete an active alert by its ID.',
+    skipGlobalAd: true, // Verhindert globale Werbung
     execute: async (bot, msg, args) => {
         const chatId = msg.chat.id;
 

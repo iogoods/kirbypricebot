@@ -2,6 +2,7 @@
 module.exports = {
     name: 'help',
     description: 'Displays a list of all available commands and their descriptions.',
+    skipGlobalAd: true, // Verhindert globale Werbung
     execute: async (bot, msg, args) => {
         const chatId = msg.chat.id;
         const helpMessage = `

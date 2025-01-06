@@ -2,6 +2,7 @@
 module.exports = {
     name: 'start',
     description: 'Starts the bot and displays a welcome message.',
+    skipGlobalAd: true, // Verhindert globale Werbung
     execute: async (bot, msg) => {
         const chatId = msg.chat.id;
         const firstName = msg.from.first_name || 'there';

@@ -1,7 +1,9 @@
 const axios = require('axios');
+const { integrateAdvertisement } = require('../utils/advertisement'); // Werbung integrieren
 
 module.exports = {
     name: 'rates',
+    skipGlobalAd: true, // Verhindert globale Werbung
     async execute(bot, msg) {
         const chatId = msg.chat.id;
 
@@ -38,10 +40,13 @@ module.exports = {
                 }
             }
 
-            await bot.sendMessage(chatId, responseMessage, { parse_mode: 'Markdown' });
+            const finalMessage = integrateAdvertisement(responseMessage); // Werbung hinzufügen
+            await bot.sendMessage(chatId, finalMessage, { parse_mode: 'Markdown', disable_web_page_preview: true });
         } catch (error) {
             console.error('Error fetching economic indicators:', error);
-            await bot.sendMessage(chatId, 'Sorry, an error occurred while fetching the economic indicators.');
+            const errorMessage = 'Sorry, an error occurred while fetching the economic indicators.';
+            const finalErrorMessage = integrateAdvertisement(errorMessage); // Werbung hinzufügen
+            await bot.sendMessage(chatId, finalErrorMessage, { parse_mode: 'Markdown', disable_web_page_preview: true });
         }
     },
 };
