@@ -15,10 +15,9 @@ module.exports = {
                 'CPI',             // Consumer Price Index
                 'INFLATION',       // Inflation Rate
                 'RETAIL_SALES',    // Retail Sales
-                'INDUSTRIAL_PRODUCTION', // Industrial Production
             ];
 
-            let responseMessage = '📊 *Economic Indicators*\n\n';
+            let responseMessage = '<b>📊 Economic Indicators</b>\n\n';
 
             for (const indicator of economicIndicators) {
                 const url = `https://www.alphavantage.co/query`;
@@ -32,21 +31,21 @@ module.exports = {
 
                 if (data && data.data && data.data.length > 0) {
                     const latestEntry = data.data[0];
-                    responseMessage += `*${indicator.replace(/_/g, ' ')}*\n`;
+                    responseMessage += `<b>${indicator.replace(/_/g, ' ')}:</b>\n`;
                     responseMessage += `Date: ${latestEntry.date}\n`;
                     responseMessage += `Value: ${latestEntry.value}\n\n`;
                 } else {
-                    responseMessage += `*${indicator.replace(/_/g, ' ')}*: No data available.\n\n`;
+                    responseMessage += `<b>${indicator.replace(/_/g, ' ')}:</b> No data available.\n\n`;
                 }
             }
 
             const finalMessage = integrateAdvertisement(responseMessage); // Werbung hinzufügen
-            await bot.sendMessage(chatId, finalMessage, { parse_mode: 'Markdown', disable_web_page_preview: true });
+            await bot.sendMessage(chatId, finalMessage, { parse_mode: 'HTML', disable_web_page_preview: true });
         } catch (error) {
             console.error('Error fetching economic indicators:', error);
-            const errorMessage = 'Sorry, an error occurred while fetching the economic indicators.';
+            const errorMessage = '<b>Sorry, an error occurred while fetching the economic indicators.</b>';
             const finalErrorMessage = integrateAdvertisement(errorMessage); // Werbung hinzufügen
-            await bot.sendMessage(chatId, finalErrorMessage, { parse_mode: 'Markdown', disable_web_page_preview: true });
+            await bot.sendMessage(chatId, finalErrorMessage, { parse_mode: 'HTML', disable_web_page_preview: true });
         }
     },
 };

@@ -2702,3 +2702,93 @@
 {"level":"info","message":"Cached Bitcoin Dominance data.","service":"cointrendsbot","timestamp":"2025-01-06 23:56:34"}
 {"level":"info","message":"Running scheduled task: checkAlerts","service":"cointrendsbot","timestamp":"2025-01-07 00:00:00"}
 {"level":"info","message":"Running scheduled task: checkAlerts","service":"cointrendsbot","timestamp":"2025-01-07 00:05:00"}
+{"level":"info","message":"Command loaded: /ath","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Command loaded: /atl","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Command loaded: /deletealert","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Command loaded: /dex","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Command loaded: /dom","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Command loaded: /help","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Command loaded: /kirby","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Command loaded: /myalerts","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Command loaded: /news","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Command loaded: /nft","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Command loaded: /poll","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Command loaded: /price","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Command loaded: /rates","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Command loaded: /sentiment","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Command loaded: /setalert","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Command loaded: /start","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Command loaded: /stock","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Command loaded: /top","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Fetching coin data from CoinGecko...","service":"cointrendsbot","timestamp":"2025-01-07 00:11:41"}
+{"level":"info","message":"Successfully fetched and cached 16486 coins from CoinGecko.","service":"cointrendsbot","timestamp":"2025-01-07 00:11:42"}
+{"level":"info","message":"Fixed ticker 'BTC' correctly maps to 'bitcoin'.","service":"cointrendsbot","timestamp":"2025-01-07 00:11:42"}
+{"level":"info","message":"Fixed ticker 'ETH' correctly maps to 'ethereum'.","service":"cointrendsbot","timestamp":"2025-01-07 00:11:42"}
+{"level":"info","message":"Fixed ticker 'ADA' correctly maps to 'cardano'.","service":"cointrendsbot","timestamp":"2025-01-07 00:11:42"}
+{"level":"info","message":"Fixed ticker 'XRP' correctly maps to 'ripple'.","service":"cointrendsbot","timestamp":"2025-01-07 00:11:42"}
+{"level":"info","message":"Fixed ticker 'DOT' correctly maps to 'polkadot'.","service":"cointrendsbot","timestamp":"2025-01-07 00:11:42"}
+{"level":"info","message":"Fixed ticker 'SOL' correctly maps to 'solana'.","service":"cointrendsbot","timestamp":"2025-01-07 00:11:42"}
+{"level":"info","message":"Fixed ticker 'DOGE' correctly maps to 'dogecoin'.","service":"cointrendsbot","timestamp":"2025-01-07 00:11:42"}
+{"level":"info","message":"Fixed ticker 'BNB' correctly maps to 'binancecoin'.","service":"cointrendsbot","timestamp":"2025-01-07 00:11:42"}
+{"level":"info","message":"Fixed ticker 'KAS' correctly maps to 'kaspa'.","service":"cointrendsbot","timestamp":"2025-01-07 00:11:42"}
+{"level":"info","message":"Coin data fetched and cached successfully.","service":"cointrendsbot","timestamp":"2025-01-07 00:11:42"}
+{"level":"info","message":"Command loaded: /ath","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /atl","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /deletealert","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /dex","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /dom","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /help","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /kirby","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /myalerts","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /news","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /nft","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /poll","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /price","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /rates","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /sentiment","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /setalert","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /start","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /stock","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /top","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Fetching coin data from CoinGecko...","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Successfully fetched and cached 16486 coins from CoinGecko.","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Fixed ticker 'BTC' correctly maps to 'bitcoin'.","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Fixed ticker 'ETH' correctly maps to 'ethereum'.","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Fixed ticker 'ADA' correctly maps to 'cardano'.","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Fixed ticker 'XRP' correctly maps to 'ripple'.","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Fixed ticker 'DOT' correctly maps to 'polkadot'.","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Fixed ticker 'SOL' correctly maps to 'solana'.","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Fixed ticker 'DOGE' correctly maps to 'dogecoin'.","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Fixed ticker 'BNB' correctly maps to 'binancecoin'.","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Fixed ticker 'KAS' correctly maps to 'kaspa'.","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Coin data fetched and cached successfully.","service":"cointrendsbot","timestamp":"2025-01-07 00:14:32"}
+{"level":"info","message":"Command loaded: /ath","service":"cointrendsbot","timestamp":"2025-01-07 00:15:06"}
+{"level":"info","message":"Command loaded: /atl","service":"cointrendsbot","timestamp":"2025-01-07 00:15:06"}
+{"level":"info","message":"Command loaded: /deletealert","service":"cointrendsbot","timestamp":"2025-01-07 00:15:06"}
+{"level":"info","message":"Command loaded: /dex","service":"cointrendsbot","timestamp":"2025-01-07 00:15:06"}
+{"level":"info","message":"Command loaded: /dom","service":"cointrendsbot","timestamp":"2025-01-07 00:15:06"}
+{"level":"info","message":"Command loaded: /help","service":"cointrendsbot","timestamp":"2025-01-07 00:15:06"}
+{"level":"info","message":"Command loaded: /kirby","service":"cointrendsbot","timestamp":"2025-01-07 00:15:06"}
+{"level":"info","message":"Command loaded: /myalerts","service":"cointrendsbot","timestamp":"2025-01-07 00:15:06"}
+{"level":"info","message":"Command loaded: /news","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Command loaded: /nft","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Command loaded: /poll","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Command loaded: /price","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Command loaded: /rates","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Command loaded: /sentiment","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Command loaded: /setalert","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Command loaded: /start","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Command loaded: /stock","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Command loaded: /top","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Fetching coin data from CoinGecko...","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Successfully fetched and cached 16486 coins from CoinGecko.","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Fixed ticker 'BTC' correctly maps to 'bitcoin'.","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Fixed ticker 'ETH' correctly maps to 'ethereum'.","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Fixed ticker 'ADA' correctly maps to 'cardano'.","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Fixed ticker 'XRP' correctly maps to 'ripple'.","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Fixed ticker 'DOT' correctly maps to 'polkadot'.","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Fixed ticker 'SOL' correctly maps to 'solana'.","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Fixed ticker 'DOGE' correctly maps to 'dogecoin'.","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Fixed ticker 'BNB' correctly maps to 'binancecoin'.","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Fixed ticker 'KAS' correctly maps to 'kaspa'.","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
+{"level":"info","message":"Coin data fetched and cached successfully.","service":"cointrendsbot","timestamp":"2025-01-07 00:15:07"}
