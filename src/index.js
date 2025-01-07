@@ -47,33 +47,29 @@ bot.commands = commands;
 
 // Message Handler
 bot.on('message', async (msg) => {
-    if (!msg.text) return;
+    if (!msg.text) return; // Nur Textnachrichten verarbeiten
 
     const chatId = msg.chat.id;
     const text = msg.text.trim();
 
-    if (!text.startsWith('/')) {
-        return;
-    }
+    // Nur Befehle verarbeiten
+    if (!text.startsWith('/')) return;
 
-    const [commandName, ...args] = text.split(/\s+/);
+    // Befehl und Argumente extrahieren
+    const [commandNameRaw, ...args] = text.split(/\s+/);
+    const [commandName] = commandNameRaw.split('@');
 
-    if (commands.has(commandName.toLowerCase())) {
-        const command = commands.get(commandName.toLowerCase());
+    const command = commands.get(commandName.toLowerCase());
+    if (command) {
         try {
-            bot.currentCommand = commandName.toLowerCase();
             await command.execute(bot, msg, args);
-
-            // Werbung nur senden, wenn sie nicht bereits integriert wurde
-            if (!command.skipGlobalAd) {
-                await sendAdvertisement(bot, chatId);
-            }
         } catch (error) {
             logger.error(`Error executing command ${commandName}:`, error);
             await bot.sendMessage(chatId, "Sorry, an error occurred while executing the command.");
         }
     } else {
-        await bot.sendMessage(chatId, "Unknown command. Use /help to see the list of available commands.");
+        // Unbekannte Befehle ignorieren, ohne Fehlermeldung zu senden
+        logger.warn(`Unknown command received: ${commandName}`);
     }
 });
 
