@@ -16,7 +16,8 @@ Here’s what I can do for you:
 • **/kirby** - Fetches and displays the current price of Kirby.
   - *Example:* /kirby
 - **/top**: Show the top 10 cryptocurrencies by market capitalization.
-- **/price [Cryptocurrency]**: Display the current price of a specific cryptocurrency.
+- **/price or /p [Cryptocurrency]**: Display the current price of a specific cryptocurrency.
+- **/chart or /c [Cryptocurrency]**: Display the current chart of a specific cryptocurrency.
 - **/news**: Show the latest news from the crypto world.
 - **/dex [mint_address] - Displays the price of a Solana token based on its mint address.
 - **/dom - Displays the current Bitcoin Dominance and total cryptocurrency market cap.

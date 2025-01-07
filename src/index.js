@@ -45,6 +45,18 @@ fs.readdirSync(commandsPath).forEach((file) => {
 // Attach commands to the bot
 bot.commands = commands;
 
+
+// Index.js: Registrierung von Befehlen mit Aliases
+commands.forEach(command => {
+    bot.commands.set(`/${command.name}`, command);
+    if (command.aliases) {
+        command.aliases.forEach(alias => {
+            bot.commands.set(`/${alias}`, command);
+        });
+    }
+});
+
+
 // Message Handler
 bot.on('message', async (msg) => {
     if (!msg.text) return; // Nur Textnachrichten verarbeiten
@@ -108,6 +120,30 @@ cron.schedule('*/5 * * * *', () => {
     logger.info('Running scheduled task: checkAlerts');
     checkAlerts(bot);
 });
+
+
+
+
+bot.onText(/\/chart (\S+)\s+(\S+)/, async (msg, match) => {
+    const chatId = msg.chat.id;
+    const symbol = match[1];    // erstes Argument nach /chart
+    const timeframe = match[2]; // zweites Argument nach /chart
+    
+    try {
+      // Screenshot erstellen (als Buffer)
+      const screenshotBuffer = await generateChartScreenshot(symbol, timeframe);
+  
+      // Screenshot über Telegram senden
+      await bot.sendPhoto(chatId, screenshotBuffer, {
+        caption: `Chart für ${symbol} (${timeframe})`
+      });
+    } catch (error) {
+      console.error(error);
+      bot.sendMessage(chatId, `Fehler beim Erstellen des Charts für ${symbol} (${timeframe})`);
+    }
+  });
+
+
 
 // Pre-fetch coin data
 if (fetchAndCacheCoinData) {

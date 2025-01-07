@@ -20,6 +20,9 @@ Here is a list of all available commands:
 • **/price [Cryptocurrency]** - Displays the current price of a specific cryptocurrency.
   - *Example:* /price bitcoin
 
+• **/chart or /c [Cryptocurrency]**: Display the current chart of a specific cryptocurrency.
+  - *Example:* /c bitcoin
+
 • **/news** - Shows the latest news from the crypto world.
   - *Example:* /news
 

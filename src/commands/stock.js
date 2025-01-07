@@ -4,6 +4,8 @@ const { integrateAdvertisement } = require('../utils/advertisement');
 
 module.exports = {
     name: 'stock',
+    aliases: ['s'], // Alias für /s
+
     description: 'Fetches the current price of a stock.',
     usage: '/stock [symbol or full name]',
     skipGlobalAd: true, // Verhindert globale Werbung
